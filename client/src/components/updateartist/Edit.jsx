@@ -15,7 +15,7 @@ const EditArtist = () => {
   useEffect(() => {
     const fetchArtist = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/getOne/${id}`);
+        const response = await fetch(`https://artist-xk70.onrender.com/api/getOne/${id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch artist');
         }
@@ -39,7 +39,7 @@ const EditArtist = () => {
     const updatedArtist = { name, genre, awards, artist_album, records_label };
 
     try {
-      const response = await fetch(`http://localhost:8000/api/update/${id}`, {
+      const response = await fetch(`https://artist-xk70.onrender.com/api/update/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedArtist)
