@@ -10,7 +10,7 @@ const ArtistList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/getAll");
+        const response = await fetch("https://artist-xk70.onrender.com/api/getAll");
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -28,7 +28,7 @@ const ArtistList = () => {
   // Delete an artist
   const deleteArtist = async (artistId) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/delete/${artistId}`, {
+      const response = await fetch(`https://artist-xk70.onrender.com/api/delete/${artistId}`, {
         method: 'DELETE'
       });
       if (!response.ok) {
