@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.5",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -13,10 +14,7 @@
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
-    "web-vals": "^2.1.4"
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.5",
+    "web-vitals": "^2.1.4",
     "serve": "^14.0.1"
   },
   "scripts": {
@@ -24,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "serve -s build"  // New script to serve the build locally
+    "serve": "serve -s build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "."  // Optional: Add this if you're deploying to a sub-path, e.g., "homepage": "https://example.com/your-app"
+  }
 }
