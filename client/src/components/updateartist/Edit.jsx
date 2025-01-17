@@ -4,7 +4,6 @@ import toast from 'react-hot-toast';
 
 const EditArtist = () => {
   const { id } = useParams();
-  const [artist, setArtist] = useState({});
   const [name, setName] = useState('');
   const [genre, setGenre] = useState('');
   const [awards, setAwards] = useState('');
@@ -20,7 +19,6 @@ const EditArtist = () => {
           throw new Error('Failed to fetch artist');
         }
         const data = await response.json();
-        setArtist(data);
         setName(data.name);
         setGenre(data.genre);
         setAwards(data.awards);
