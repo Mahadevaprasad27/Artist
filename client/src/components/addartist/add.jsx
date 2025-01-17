@@ -28,7 +28,7 @@ const AddArtist = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/create', artist);
+      const response = await axios.post('https://artist-xk70.onrender.com/api/create', artist);
       toast.success(response.data.msg, { position: 'top-right' });
       navigate('/'); // Redirect to the main page
     } catch (error) {
